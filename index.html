@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Efeito Doppler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora - Efeito Doppler</h1>
+        <form id="dopplerForm">
+            <div class="input-group">
+                <label for="vSom">Velocidade do som (m/s):</label>
+                <input type="number" id="vSom" value="340" step="any" required>
+            </div>
+
+            <div class="input-group">
+                <label for="fFonte">Frequência da Fonte (Hz):</label>
+                <input type="number" id="fFonte" placeholder="Ex: 440" step="any" required>
+            </div>
+
+            <div class="input-group">
+                <label for="vObs">Velocidade do Observador (m/s):</label>
+                <input type="number" id="vObs" placeholder="Ex: 0" step="any" required>
+            </div>
+
+            <div class="input-group">
+                <label for="dirObs">Direção do Observador:</label>
+                <select id="dirObs">
+                    <option value="aproximando">Aproximando-se da fonte</option>
+                    <option value="afastando">Afastando-se da fonte</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="vFonte">Velocidade da Fonte (m/s):</label>
+                <input type="number" id="vFonte" placeholder="Ex: 20" step="any" required>
+            </div>
+
+            <div class="input-group">
+                <label for="dirFonte">Direção da Fonte:</label>
+                <select id="dirFonte">
+                    <option value="aproximando">Aproximando-se do observador</option>
+                    <option value="afastando">Afastando-se do observador</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="calcularDoppler()">Calcular Frequência Percebida</button>
+        </form>
+
+        <div id="resultado" class="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
